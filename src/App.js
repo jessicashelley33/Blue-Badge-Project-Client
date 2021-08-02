@@ -7,7 +7,7 @@ import Reviews from './components/Reviews'
 import Contact from './components/Contact'
 import React from 'react';
 import Footer from './components/Footer'
-import Nav from './components/Nav'
+import Nav from './components/NavBar'
 
 
 //mport Routes from './Routes'
@@ -23,7 +23,7 @@ const [hideContentsContact , setHideContentsContact] = React.useState(false)
   return (
     
       <div className="App">
-        <Nav />
+       <Nav />
           <Routes setHideContentsAbout={setHideContentsAbout} setHideContentsFav={setHideContentsFav} setHideContentsReviews={setHideContentsReviews} setHideContentsContact={setHideContentsContact} />
        
          
@@ -31,8 +31,8 @@ const [hideContentsContact , setHideContentsContact] = React.useState(false)
        { hideContentsFav ? null : <FavDestinations /> } 
        { hideContentsReviews ? null : <Reviews /> } 
       { hideContentsContact ? null : <Contact /> } 
-        <Footer />
-        
+       
+       <Footer /> 
   </div>
   
       

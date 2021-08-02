@@ -10,7 +10,7 @@ import ImgSix from '../assests/Img-6.jpg'
 
 const FavDestinations = () => {
     return(
-        <div className="bgLight">
+        <div className="bgLight" id="gallery">
             <h4 className="text-center lead ">Favorite Spot This Month</h4>
             <h3 className="text-center lead display-4">Thailand</h3>
                  <div className="container">

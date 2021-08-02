@@ -8,7 +8,7 @@ import { Typography } from "@material-ui/core";
 
 const About = () => {
     return (
-        <div className="mt-0 AboutStyle">
+        <div className="mt-0 AboutStyle" id="about">
         <Typography
         align="center">
         <h2 className="lead display-5">About Us</h2>

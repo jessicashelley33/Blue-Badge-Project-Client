@@ -4,7 +4,7 @@ import './css/review.css'
 
 const Review = () => {
     return(
-        <main className="bgBlue">
+        <main className="bgBlue" id="reviews">
         <div className="container">
             <h3 className="lead display-4 text-center mt-5">Customer Reviews</h3>
             <div className="row row-cols-1 row-cols-md-2 g-4">

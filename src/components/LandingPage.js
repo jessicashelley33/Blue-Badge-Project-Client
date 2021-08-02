@@ -22,7 +22,7 @@ const Register = () => {
             <div className="AppHeader" style={{"--img":'url('+HeroImage+')' }}>
               {/*Photo by Efrain Alonso from Pexels */}
             </div>
-            <div className="App-content">
+            <div className="App-content" id="home">
                 <Typography>
                 <h1 className="display-1">Travel Agency </h1>
                  <p className="lead display-6">Your Next Destination is Just a Click away</p>

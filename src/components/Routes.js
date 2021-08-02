@@ -6,6 +6,7 @@ import Register from './UserLogin/Register'
 import Login from './UserLogin/Login'
 import history from './history';
 
+
 export default class Routes extends Component {
     render() {
         return (
@@ -15,6 +16,7 @@ export default class Routes extends Component {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login} />
                 </Switch>
+                
             </Router>
         )
     }

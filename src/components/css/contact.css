@@ -1,0 +1,14 @@
+.form-floating{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.btnContact{
+    background-color: #769db6;
+    color: #174157;
+}
+
+.btnContact:hover{
+        background-color: #174157;
+        color:#769db6;
+}

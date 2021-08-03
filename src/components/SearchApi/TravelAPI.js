@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./openmap.css";
 
-import { Row, Col, Button, Input, Form, FormGroup } from "reactstrap";
+import { Row, Col, Button, Input, FormGroup } from "reactstrap";
 
 const OpenMap = (props) => {
   const apiKey = "5ae2e3f221c38a28845f05b6184e4c35ed4f223cddb9932ee91a216c";
@@ -166,14 +166,19 @@ const OpenMap = (props) => {
                 {resultRadius} nearby attractions within 500m radius.
               </h2>
               <Input
+              style={{
+                margin: '0.5em'
+              }}
                 type="text"
                 name="description"
-                placeholder="description"
+                placeholder="Description"
                 value={display}
                 onChange={(e) => setDisplay(e.target.value)}
               />
-              <Button type="Submit" outline color="info">
-                search
+              <Button
+              
+              type="Submit" outline color="info">
+                Search
               </Button>
             </form>
           </Col>

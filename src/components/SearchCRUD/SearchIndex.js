@@ -36,7 +36,7 @@ const SearchIndex = (props) => {
   };
   useEffect(() => {
     getSaved();
-  }, []);
+  });
 
   return (
     <Container>

@@ -38,12 +38,34 @@ const SearchAll = (props) => {
       <Table striped>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Rating</th>
-            <th>Description</th>
-            <th>Destination</th>
-            <th>Name</th>
-            <th>Attractions</th>
+            <th
+            style={{
+              padding: '0.2em'
+            }}
+            >#</th>
+            <th
+            style={{
+              padding: '0.2em'
+            }}>Rating</th>
+            <th
+            style={{
+              padding: '0.2em'
+            }}>Description</th>
+            <th
+            style={{
+              padding: '0.2em'
+            }}
+            >Destination</th>
+            <th
+            style={{
+              padding: '0.2em'
+            }}
+            >Name</th>
+            <th
+            style={{
+              padding: '0.2em'
+            }}
+            >Attractions</th>
           </tr>
         </thead>
         <tbody>{Mapper()}</tbody>

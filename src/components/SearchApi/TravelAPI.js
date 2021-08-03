@@ -152,7 +152,7 @@ const OpenMap = (props) => {
     <>
       <FormGroup onSubmit={searchCountry}>
         <Row>
-          <Col md="6">
+          <Col md="4">
             <form
               class="border border-primary rounded nasa"
               // onSubmit={searchCountry}
@@ -177,7 +177,7 @@ const OpenMap = (props) => {
               </Button>
             </form>
           </Col>
-          <Col md="6">
+          {/* <Col md="6">
             <form class="border border-primary rounded nasa">
               <h4 className="text-info">Add to saved Locations.</h4>
               <label className="text-info">Name:</label>
@@ -202,8 +202,9 @@ const OpenMap = (props) => {
                 search
               </Button>
             </form>
-          </Col>
+          </Col> */}
         </Row>
+
         <hr />
         <Row>
           <Col md="4">

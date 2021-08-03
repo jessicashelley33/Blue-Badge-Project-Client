@@ -24,51 +24,102 @@ const Register = (props) => {
       });
   };
   return (
-    <div>
-      <h1>SignUp</h1>
+    <div className="wrapper">
+      <h1 className="textHeader">SignUp</h1>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <Label htmlFor="email">Email:</Label>
+          <div>
+          <Label htmlFor="email">Email</Label>
+          </div>
           <Input
+          style={{
+            textAlign: 'center'
+          }}
+           placeholder="Enter Email"
+          className="inputValue"
             type="text"
             onChange={(e) => setUserEmail(e.target.value)}
             required
             value={userEmail}
           />
         </FormGroup>
-        <FormGroup>
-          <Label htmlFor="password">Password</Label>
+        <FormGroup
+        
+        style={{
+          margin:'1rem'
+        }}>
+        <div>
+        <Label htmlFor="password">Password</Label>
+            </div>
+          
           <Input
+          style={{
+            textAlign: 'center'
+          }}
+           placeholder="MyPassword2021"
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
         </FormGroup>
-        <FormGroup>
-          <Label htmlFor="firstName">First Name:</Label>
+        <FormGroup
+        style={{
+          margin:'1rem'
+        }}>
+        <div>
+        <Label htmlFor="firstName">First Name</Label>
+            </div>
+          
           <Input
+          style={{
+            textAlign: 'center'
+          }}
+           placeholder="John"
             type="text"
             onChange={(e) => setFirstName(e.target.value)}
             value={firstName}
           />
         </FormGroup>
-        <FormGroup>
-          <Label htmlFor="lastName">Last Name:</Label>
+        <FormGroup
+        style={{
+          margin:'1rem'
+        }}
+        >
+        <div>
+        <Label htmlFor="lastName">Last Name</Label>
+            </div>
+          
           <Input
+          style={{
+            textAlign: 'center'
+          }}
+           placeholder="Smith"
             type="text"
             onChange={(e) => setLastName(e.target.value)}
             value={lastName}
           />
         </FormGroup>
-        <FormGroup>
-          <Label htmlFor="address">Address:</Label>
-          <Input
+        <FormGroup
+        style={{
+          margin:'1rem'
+        }}
+        >
+        <div>
+        <Label htmlFor="address">Address</Label>
+            </div>
+           <Input
+           style={{
+            textAlign: 'center'
+          }}
+          placeholder="3568 Lee Way"
             type="text"
             onChange={(e) => setAddress(e.target.value)}
             value={address}
           />
         </FormGroup>
-        <Button type="submit">SignUp</Button>
+        <Button type="submit"
+        className="btn"
+        >SignUp</Button>
       </Form>
     </div>
   );

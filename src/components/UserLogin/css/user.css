@@ -1,0 +1,43 @@
+.wrapper{
+    margin-top: 3rem;
+    padding-bottom: 8rem;
+   
+   
+}
+
+.textHeader{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.btn{
+    padding: 10px 50px;
+    margin-top: 0.5rem;
+    font-size:18px;
+    background-color: #7fbfbf;
+    color: #e7ecee;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.btn:focus{
+    outline:none;
+}
+
+Label{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 1em;
+    
+    }
+
+
+Input{
+    padding: 15px 120px;
+    border-radius: 10px;
+    border: none;
+    outline:none;
+    
+    
+}

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import './css/user.css'
+
+
 
 const UserLogin= (props) => {
   const [userEmail, setUserEmail] = useState("");
@@ -22,28 +25,54 @@ const UserLogin= (props) => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="wrapper">
+      <h1 className="textHeader">Login</h1>
+     
       <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <Label htmlFor="email">Email:</Label>
+          <div className="labelSpace">
+          <Label
+          style={{
+           
+           
+          }}
+          htmlFor="email">Email</Label>
+          </div>
           <Input
+          style={{
+            textAlign: 'center'
+          }}
+          placeholder="Enter Email"
             type="text"
             value={userEmail}
             onChange={(e) => setUserEmail(e.target.value)}
           />
         </FormGroup>
-        <FormGroup>
+        
+        <FormGroup
+        style={{
+          margin:'1.5rem'
+        }}
+        
+        >
+          <div>
           <Label htmlFor="password">Password</Label>
+          </div>
           <Input
+          style={{
+            textAlign: 'center'
+          }}
+          placeholder="Enter Password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </FormGroup>
-        <Button type="submit">Login</Button>
+      
+        <Button className="btn" type="submit">Login</Button>
       </Form>
+      
     </div>
   );
 };

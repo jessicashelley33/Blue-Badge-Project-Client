@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 const SavedTable = (props) => {
@@ -41,53 +41,77 @@ const SavedTable = (props) => {
     <>
       <h3>Save Destination</h3>
       <Form onSubmit={handleSubmit}>
-        <FormGroup>
+        <FormGroup
+        style={{
+          padding: '0.4em',
+          textAlign: 'center'
+        }}
+        >
           <Label htmlFor="destination"></Label>
           <Input
             type="text"
             name="destination"
-            placeholder="destination"
+            placeholder="Destination"
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
           >
           </Input>
         </FormGroup>
-        <FormGroup>
+        <FormGroup
+         style={{
+          padding: '0.4em',
+          textAlign: 'center'
+        }}
+        >
           <Label htmlFor="description"></Label>
           <Input
             type="text"
             name="description"
-            placeholder="description"
+            placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
         </FormGroup>
-        <FormGroup>
+        <FormGroup
+        
+        style={{
+          padding: '0.4em',
+          textAlign: 'center'
+        }}>
           <Label htmlFor="result"></Label>
           <Input
             type="text"
             name="name"
-            placeholder="name"
+            placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </FormGroup>
-        <FormGroup>
+        <FormGroup
+        
+        style={{
+          padding: '0.4em',
+          textAlign: 'center'
+        }}>
           <Label htmlFor="result"></Label>
           <Input
             type="text"
             name="attractions"
-            placeholder="attractions"
+            placeholder="Attractions"
             value={attractions}
             onChange={(e) => setAttractions(e.target.value)}
           />
         </FormGroup>
-        <FormGroup>
+        <FormGroup
+        style={{
+          padding: '0.4em',
+          textAlign: 'center'
+        }}>
           <Label htmlFor="rating"></Label>
           <Input
             type="text"
             name="rating"
-            placeholder="rating"
+            placeholder="Rating"
             value={rating}
             onChange={(e) => setRating(e.target.value)}
           />

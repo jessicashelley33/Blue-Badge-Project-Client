@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import OpenMap from "./components/SearchApi/TravelAPI";
+//import OpenMap from "./components/SearchApi/TravelAPI";
 import SearchIndex from "./components/SearchCRUD/SearchIndex";
 import UserIndex from "./components/UserLogin/UserIndex";
 import {Button}from "reactstrap"

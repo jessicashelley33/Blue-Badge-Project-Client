@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  
+}
+.row{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+Button:hover{
+  color: white;
+}
+ul{
+    list-style: none;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input, Container } from "reactstrap";
+import APIURL from '../../helpers/environment'
 
 const SavedTable = (props) => {
 
@@ -11,7 +12,7 @@ const SavedTable = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/save/create", {
+    fetch(`${APIURL}/save/create`, {
       method: "POST",
       body: JSON.stringify({
         destination:destination,

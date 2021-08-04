@@ -1,10 +1,11 @@
 import React from "react";
 import { Table, Button, Container } from "reactstrap";
+import APIURL from '../../helpers/environment'
 
 
 const SearchAll = (props) => {
     const deleteDestination = (place) => {
-      fetch(`http://localhost:5000/save/${place.id}`, {
+      fetch(`${APIURL}/save/${place.id}`, {
         method: "DELETE",
         headers: new Headers({
           "Content-Type": "application.json",

@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import APIURL from '../../helpers/environment'
 ///////
 ///////
 const UpdateSearch = (props) => {
@@ -22,7 +23,7 @@ const UpdateSearch = (props) => {
   //////
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:5000/save/${id}`, {
+    fetch(`${APIURL}/save/${id}`, {
       method: "PUT",
       body: JSON.stringify({
         destination: destination,

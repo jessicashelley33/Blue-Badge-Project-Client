@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input, Container } from "reactstrap";
 
 const SavedTable = (props) => {
 
@@ -38,18 +38,17 @@ const SavedTable = (props) => {
   };
 
   return (
-    <>
-      <h3>Save Destination</h3>
+    <Container>
+      <h3
+      style={{
+        color: '#fff'
+      }}
+      >Save Destination</h3>
       <Form onSubmit={handleSubmit}>
-        <FormGroup
-        style={{
-          padding: '0.4em',
-          textAlign: 'center'
-        }}
-        >
+        <FormGroup>
           <Label htmlFor="destination"></Label>
           <Input
-            type="text"
+          type="text"
             name="destination"
             placeholder="Destination"
             value={destination}
@@ -58,10 +57,7 @@ const SavedTable = (props) => {
           </Input>
         </FormGroup>
         <FormGroup
-         style={{
-          padding: '0.4em',
-          textAlign: 'center'
-        }}
+        
         >
           <Label htmlFor="description"></Label>
           <Input
@@ -72,12 +68,7 @@ const SavedTable = (props) => {
             onChange={(e) => setDescription(e.target.value)}
           />
         </FormGroup>
-        <FormGroup
-        
-        style={{
-          padding: '0.4em',
-          textAlign: 'center'
-        }}>
+        <FormGroup>
           <Label htmlFor="result"></Label>
           <Input
             type="text"
@@ -87,12 +78,7 @@ const SavedTable = (props) => {
             onChange={(e) => setName(e.target.value)}
           />
         </FormGroup>
-        <FormGroup
-        
-        style={{
-          padding: '0.4em',
-          textAlign: 'center'
-        }}>
+        <FormGroup>
           <Label htmlFor="result"></Label>
           <Input
             type="text"
@@ -102,11 +88,7 @@ const SavedTable = (props) => {
             onChange={(e) => setAttractions(e.target.value)}
           />
         </FormGroup>
-        <FormGroup
-        style={{
-          padding: '0.4em',
-          textAlign: 'center'
-        }}>
+        <FormGroup>
           <Label htmlFor="rating"></Label>
           <Input
             type="text"
@@ -116,9 +98,19 @@ const SavedTable = (props) => {
             onChange={(e) => setRating(e.target.value)}
           />
         </FormGroup>
-        <Button type="Submit">Submit</Button>
+        <Button
+         style={{
+          marginTop: '0.9em',
+          padding: '8px 90px ',
+          backgroundColor: '#7fbfbf',
+          color: '#e7ecee',
+          border: 'none',
+          borderRadius: '20px',
+          fontWeight: '700'
+        }}
+        type="Submit">Submit</Button>
       </Form>
-    </>
+    </Container>
   );
 };
 

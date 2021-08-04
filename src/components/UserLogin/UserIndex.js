@@ -16,11 +16,11 @@ const UserIndex = (props) => {
       </div>
       
       <Row>
-        <Col sm="12" md={{ size: 6, offset: 3 }}>
+        <Col>
           <Register updateToken={props.updateToken} />
         </Col>
 
-        <Col sm="12" md={{ size: 6, offset: 3 }} className="login-col">
+        <Col>
           <UserLogin updateToken={props.updateToken} />
         </Col>
       </Row>

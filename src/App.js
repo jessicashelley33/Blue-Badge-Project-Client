@@ -32,7 +32,20 @@ function App() {
 
   return (
     <div className="App">
-      <div><Button onClick={clearToken}>Logout</Button></div>
+      <div><Button 
+      style={{
+        marginTop: '1.9em',
+        padding: '10px 50px',
+        fontSize:'18px',
+        backgroundColor: '#7fbfbf',
+        color: '#e7ecee',
+        border: 'none',
+        borderRadius: '20px',
+        fontWeight: '700'
+
+        
+      }}
+      onClick={clearToken}>Logout</Button></div>
       {protectedViews()}
       </div>
   );

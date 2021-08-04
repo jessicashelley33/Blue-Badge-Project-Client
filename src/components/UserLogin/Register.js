@@ -25,18 +25,28 @@ const Register = (props) => {
   };
   return (
     <div className="wrapper">
-      <h1 className="textHeader">SignUp</h1>
-      <Form onSubmit={handleSubmit}>
+      <h1 className="textHeader"
+      style={{
+        marginLeft: '-35%',
+        marginBottom: '0.7em'
+      }}
+      >SignUp</h1>
+      <Form onSubmit={handleSubmit}
+      style={{
+        width: '450px'
+      }}
+      >
         <FormGroup>
           <div>
           <Label htmlFor="email">Email</Label>
           </div>
           <Input
           style={{
-            textAlign: 'center'
+            textAlign: 'center',
+            width: '425px'
           }}
            placeholder="Enter Email"
-          className="inputValue"
+          
             type="text"
             onChange={(e) => setUserEmail(e.target.value)}
             required
@@ -117,8 +127,18 @@ const Register = (props) => {
             value={address}
           />
         </FormGroup>
-        <Button type="submit"
-        className="btn"
+        <Button
+         style={{
+          marginTop: '1.9em',
+          padding: '10px 50px',
+          fontSize:'18px',
+          backgroundColor: '#7fbfbf',
+          color: '#e7ecee',
+          border: 'none',
+          borderRadius: '20px',
+          fontWeight: '700'
+        }}
+        type="submit"
         >SignUp</Button>
       </Form>
     </div>

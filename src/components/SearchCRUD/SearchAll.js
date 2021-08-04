@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Button } from "reactstrap";
+import { Table, Button, Container } from "reactstrap";
 
 
 const SearchAll = (props) => {
@@ -24,53 +24,59 @@ const SearchAll = (props) => {
           <td>{place.destination}</td>
           <td>{place.name}</td>
           <td>{place.attractions}</td>
-          <td><Button color="warning" onClick={() => { props.editUpdateDest(place); props.updateOn() }}>Update</Button>
+          <td><Button  
+          style={{
+            marginTop: '1.9em',
+            padding: '10px 50px',
+            fontSize:'18px',
+            backgroundColor: '#7fbfbf',
+            color: '#e7ecee',
+            border: 'none',
+            borderRadius: '20px',
+            fontWeight: '700'
+          }}
+          onClick={() => { props.editUpdateDest(place); props.updateOn() }}>Update</Button>
           </td>
-          <td><Button color="danger" onClick={() => { deleteDestination(place) }}>Delete</Button></td>
+          <td><Button 
+          style={{
+            marginTop: '1.9em',
+            padding: '10px 50px',
+            fontSize:'18px',
+            backgroundColor: '#7fbfbf',
+            color: '#e7ecee',
+            border: 'none',
+            borderRadius: '20px',
+            fontWeight: '700'
+          }}
+          onClick={() => { deleteDestination(place) }}>Delete</Button></td>
         </tr>
       );
     });
   };
   return (
-    <>
-      <h3>Saved Places</h3>
+    <Container>
+      <h3 
+      style={{
+        color: '#fff'
+      }}
+      >Saved Places</h3>
       <hr />
-      <Table striped>
+      <Table striped
+      size="sm">
         <thead>
           <tr>
+            <th >#</th>
+            <th>Rating</th>
+            <th>Description</th>
+            <th>Destination</th>
+            <th>Name</th>
             <th
-            style={{
-              padding: '0.2em'
-            }}
-            >#</th>
-            <th
-            style={{
-              padding: '0.2em'
-            }}>Rating</th>
-            <th
-            style={{
-              padding: '0.2em'
-            }}>Description</th>
-            <th
-            style={{
-              padding: '0.2em'
-            }}
-            >Destination</th>
-            <th
-            style={{
-              padding: '0.2em'
-            }}
-            >Name</th>
-            <th
-            style={{
-              padding: '0.2em'
-            }}
             >Attractions</th>
           </tr>
         </thead>
         <tbody>{Mapper()}</tbody>
       </Table>
-    </>
+    </Container>
   );
 };
 

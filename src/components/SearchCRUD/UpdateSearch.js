@@ -51,56 +51,122 @@ const UpdateSearch = (props) => {
     console.log(id)
   };
   return (
-    <Modal isOpen={true}>
-      <ModalHeader>Update</ModalHeader>
+    <Modal isOpen={true} style={{
+      margin: '2rem'
+
+    }}>
+      <ModalHeader>
+        <h3
+        style={{
+          fontSize: '34px',
+          marginLeft: '8.5rem'
+          
+        }}
+        >Update</h3>
+        </ModalHeader>
       <ModalBody>
         <Form onSubmit={handleSubmit}>
           
-          <FormGroup>
+          <FormGroup
+           style={{
+            margin: '0.4em',
+            
+            
+          }}
+          >
             <Label htmlFor="destination" />
             <Input
+            style={{
+              textAlign:'center'
+            }}
               type="text"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
             />
           </FormGroup>
-          <FormGroup>
+          <FormGroup
+           style={{
+            margin: '0.4em',
+            
+          }}
+          >
             <Label htmlFor="description" />
             <Input
+            style={{
+              textAlign:'center'
+            }}
               type="text"
               name="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
           </FormGroup>
-          <FormGroup>
+          <FormGroup
+          style={{
+            margin: '0.4em',
+            
+          }}
+          >
             <Label htmlFor="name" />
             <Input
+            style={{
+              textAlign:'center'
+            }}
               type="text"
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-          </FormGroup>
-          <FormGroup>
+          </FormGroup >
+          <FormGroup
+           style={{
+            padding: '0.4em',
+            
+          }}
+          >
             <Label htmlFor="attractions" />
             <Input
+            style={{
+              textAlign:'center'
+            }}
               type="text"
               name="attractions"
               value={attractions}
               onChange={(e) => setAttractions(e.target.value)}
             />
           </FormGroup>
-          <FormGroup>
+          <FormGroup
+           style={{
+            margin: '0.4em',
+            
+          }}
+          >
             <Label htmlFor="rating" />
             <Input
+            style={{
+              textAlign:'center'
+            }}
               type="number"
               name="rating"
               value={rating}
               onChange={(e) => setRating(e.target.value)}
             />
           </FormGroup>
-          <Button type="submit">Update</Button>
+          <div className="d-grip gap-2">
+          <Button
+          style={{
+            marginLeft: '5rem',
+            padding: '8px 90px ',
+            backgroundColor: '#7fbfbf',
+            color: '#e7ecee',
+            border: 'none',
+            borderRadius: '20px',
+            fontWeight: '700'
+          }}
+           variant="outline-secondary" size="lg"
+          type="submit">Update</Button>
+          </div>
+        
         </Form>
       </ModalBody>
     </Modal>

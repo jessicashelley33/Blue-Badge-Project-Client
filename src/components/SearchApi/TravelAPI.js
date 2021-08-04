@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./openmap.css";
 
-import { Row, Col, Button, Input, FormGroup } from "reactstrap";
+import { Row, Col, Button, Input, FormGroup, Container } from "reactstrap";
 
 const OpenMap = (props) => {
   const apiKey = "5ae2e3f221c38a28845f05b6184e4c35ed4f223cddb9932ee91a216c";
@@ -149,25 +149,61 @@ const OpenMap = (props) => {
   ///////////
   ///////////
   return (
-    <>
-      <FormGroup onSubmit={searchCountry}>
+    <Container
+    
+    >
+      <FormGroup onSubmit={searchCountry}
+      style={{
+        marginTop: '3rem',
+        
+      }}
+      >
         <Row>
           <Col md="4">
             <form
-              class="border border-primary rounded nasa"
+             
               // onSubmit={searchCountry}
             >
-              <h4 className="text-info">Add to saved Locations.</h4>
+              <h4 className="text-light"
+              style={{
+                padding: '0.1em',
+                margin: '0.3rem'
+              }}
+              >Add to saved Locations.</h4>
 
-              <h2 className="text-info">City: {resultName}</h2>
-              <h2 className="text-info">Country: {resultCon}</h2>
-              <h2 className="text-info">Population: {resultPop}</h2>
-              <h2 className="text-info">
+              <h2 className="text-light"
+              style={{
+                padding: '0.1em',
+                margin: '0.3rem',
+                fontSize: '24px'
+              }}
+              >City: {resultName}</h2>
+              <h2 className="text-light"
+              style={{
+                padding: '0.1em',
+                margin: '0.3rem',
+                fontSize: '24px'
+              }}
+              >Country: {resultCon}</h2>
+              <h2 className="text-light"
+              style={{
+                padding: '0.1em',
+                fontSize: '24px'
+              }}
+              >Population: {resultPop}</h2>
+              <h2 className="text-light"
+              style={{
+                padding: '0.1em',
+                fontSize: '24px'
+              }}
+              >
                 {resultRadius} nearby attractions within 500m radius.
               </h2>
               <Input
               style={{
-                margin: '0.5em'
+                margin: '0.5em',
+                fontSize: '24px'
+                
               }}
                 type="text"
                 name="description"
@@ -176,8 +212,18 @@ const OpenMap = (props) => {
                 onChange={(e) => setDisplay(e.target.value)}
               />
               <Button
+              style={{
+                marginTop: '1.9em',
+                padding: '10px 50px',
+                fontSize:'18px',
+                backgroundColor: '#7fbfbf',
+                color: '#e7ecee',
+                border: 'none',
+                borderRadius: '20px',
+                fontWeight: '700'
+              }}
               
-              type="Submit" outline color="info">
+              type="Submit" >
                 Search
               </Button>
             </form>
@@ -211,11 +257,22 @@ const OpenMap = (props) => {
         </Row>
 
         <hr />
-        <Row>
-          <Col md="4">
+        <Container fluid>
+          <Row style={{
+            marginBottom: '2rem'
+          }}>
+            <Col>
             <Button
-              outline
-              color="info"
+              style={{
+                marginTop: '1.9em',
+                padding: '10px 50px',
+                fontSize:'18px',
+                backgroundColor: '#7fbfbf',
+                color: '#e7ecee',
+                border: 'none',
+                borderRadius: '20px',
+                fontWeight: '700'
+              }}
               id="next"
               type="submit"
               onClick={buttonBack}
@@ -223,21 +280,19 @@ const OpenMap = (props) => {
             >
               ({offset1}) Back 3 ({resultRadius})
             </Button>
-            <ul>
-              <hr />
-              <li>{desc1}</li>
-            </ul>
-          </Col>
-          <Col md="4">
-            <ul>
-              <hr />
-              <li>{desc2}</li>
-            </ul>
-          </Col>
-          <Col md="4">
+            </Col>
+            <Col>
             <Button
-              outline
-              color="info"
+              style={{
+                marginTop: '1.9em',
+                padding: '10px 50px',
+                fontSize:'18px',
+                backgroundColor: '#7fbfbf',
+                color: '#e7ecee',
+                border: 'none',
+                borderRadius: '20px',
+                fontWeight: '700'
+              }}
               id="next"
               type="submit"
               onClick={buttonNext}
@@ -245,14 +300,29 @@ const OpenMap = (props) => {
             >
               ({offset1}) Next 3 ({resultRadius})
             </Button>
+            </Col>
+          </Row>
+        <Row>
+          <Col>
             <ul>
-              <hr />
-              <li>{desc3}</li>
+            <li>{desc1}</li>
+            </ul>
+          </Col>
+          <Col >
+            <ul>
+             <li>{desc2}</li>
+            </ul>
+          </Col>
+          <Col>
+          <ul>
+           <li>{desc3}</li>
             </ul>
           </Col>
         </Row>
+        </Container>
       </FormGroup>
-    </>
+    
+    </Container>
   );
 };
 

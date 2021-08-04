@@ -41,10 +41,10 @@ const SearchIndex = (props) => {
   return (
     <Container>
       <Row>
-        <Col md="4">
+        <Col md={5}>
           <SavedTable getSaved={getSaved} token={props.token} />
         </Col>
-        <Col md="4">
+        <Col md={5}>
           <SearchAll
             places={places}
             getSaved={getSaved}
@@ -53,7 +53,11 @@ const SearchIndex = (props) => {
             token={props.token}
           />
         </Col>
-        <Col md="4">
+       </Row>
+      <Col>
+        <OpenMap />
+      </Col>
+      <div>
           {updateActive ? (
             <UpdateSearch
             updateDest={updateDest}
@@ -64,11 +68,7 @@ const SearchIndex = (props) => {
           ) : (
             <></>
           )}
-        </Col>
-      </Row>
-      <Col>
-        <OpenMap />
-      </Col>
+        </div>
 
     </Container>
   );

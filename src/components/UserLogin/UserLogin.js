@@ -26,22 +26,28 @@ const UserLogin= (props) => {
 
   return (
     <div className="wrapper">
-      <h1 className="textHeader">Login</h1>
+      <h1 className="textHeader"
+      style={{
+        marginLeft: '-35%',
+        marginBottom: '0.7em'
+      }}
+      >Login</h1>
      
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}
+      style={{
+        width: '450px'
+      }}
+      >
+      
         <FormGroup>
           <div className="labelSpace">
           <Label
-          style={{
-           
-           
-          }}
           htmlFor="email">Email</Label>
           </div>
           <Input
           style={{
-            textAlign: 'center'
-          }}
+            textAlign: 'center',
+            }}
           placeholder="Enter Email"
             type="text"
             value={userEmail}
@@ -49,14 +55,13 @@ const UserLogin= (props) => {
           />
         </FormGroup>
         
-        <FormGroup
-        style={{
-          margin:'1.5rem'
-        }}
-        
-        >
+        <FormGroup>
           <div>
-          <Label htmlFor="password">Password</Label>
+          <Label
+          style={{
+            marginTop: '1em'
+          }}
+          htmlFor="password">Password</Label>
           </div>
           <Input
           style={{
@@ -70,7 +75,18 @@ const UserLogin= (props) => {
           />
         </FormGroup>
       
-        <Button className="btn" type="submit">Login</Button>
+        <Button
+        style={{
+          marginTop: '1.9em',
+          padding: '10px 50px',
+          fontSize:'18px',
+          backgroundColor: '#7fbfbf',
+          color: '#e7ecee',
+          border: 'none',
+          borderRadius: '20px',
+          fontWeight: '700'
+        }}
+        className="btn" type="submit">Login</Button>
       </Form>
       
     </div>
